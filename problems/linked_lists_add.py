@@ -16,6 +16,10 @@ class ListNode(object):
     self.next = None
 
 class Solution:
+  """
+    Recursive solution: add each digit on its own, check for overflow then call next digit.
+    It is simple and direct but expensive in memory if compared to an iterative solution. 
+  """
   def addTwoNumbers(self, l1, l2, c = 0):
     # compute value for this decimal case
     dst = ListNode(l1.val + l2.val + c);
